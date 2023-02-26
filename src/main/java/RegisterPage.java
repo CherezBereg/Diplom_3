@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterPage {
-    private final static String REGISTER_URL = "https://stellarburgers.nomoreparties.site/register";
     private final WebDriver driver;
 
     public RegisterPage(WebDriver driver) {
@@ -17,7 +16,7 @@ public class RegisterPage {
     private final By signInButtonRegister = By.xpath(".//a[text()='Войти']");
 
     public void openRegisterPage() {
-        driver.get(REGISTER_URL);
+        driver.get(URI.BASE + URI.REGISTER);
     }
 
     public void inputName(String text) {

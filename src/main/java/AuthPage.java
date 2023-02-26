@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AuthPage {
-    private final static String AUTH_URL = "https://stellarburgers.nomoreparties.site/login";
     private final WebDriver driver;
 
     public AuthPage(WebDriver driver) {
@@ -17,7 +16,7 @@ public class AuthPage {
     private final By registerButtonAuthPage = By.xpath(".//a[(@class = 'Auth_link__1fOlj' and text()= 'Зарегистрироваться')]");
 
     public void openAuthPage() {
-        driver.get(AUTH_URL);
+        driver.get(URI.BASE + URI.AUTH);
     }
 
     public String getTitleText() {

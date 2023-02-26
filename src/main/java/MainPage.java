@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage {
-    private final static String BASE_URL = "https://stellarburgers.nomoreparties.site";
     private final WebDriver driver;
 
     public MainPage(WebDriver driver) {
@@ -19,7 +18,7 @@ public class MainPage {
     private final By actualSection = By.xpath("//div[contains(@class,'tab_tab_type_current__2BEPc')]//span");
 
     public void openMainPage() {
-        driver.get(BASE_URL);
+        driver.get(URI.BASE);
     }
 
     public void clickSignInButton() {
